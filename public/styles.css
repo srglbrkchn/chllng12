@@ -24,6 +24,18 @@ body {
     margin: 2rem auto;
     padding: 2rem 1rem;
     border-radius: 9px;
+    box-shadow: 0px 12px 0px 0px rgba(0, 0, 0, .2);
+}
+
+.form-content p {
+    font-size: 11px;
+    color: hsl(246, 25%, 77%);
+    margin-top: 1rem;
+}
+
+.form-content span {
+    font-weight: 700;
+    color: hsl(0, 100%, 74%);
 }
 
 .input-field {
@@ -47,7 +59,7 @@ body {
 
 .input-field input:focus {
     outline: none;
-    border: 1px solid hsl(248, 32%, 49%);
+    border: 1.5px solid hsl(248, 32%, 49%);
 }
 
 .green-btn {
