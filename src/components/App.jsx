@@ -1,6 +1,7 @@
 import React from "react";
 import Signup from "./form/Signup";
 
+
 function App() {
     return (
         <div>
@@ -8,7 +9,6 @@ function App() {
                 problems in real-time. Watching scripted tutorials is great, but understanding
                 how developers think is invaluable.</div> */}
 
-            {/* <div>Try it free 7 days then $20/mo.thereafter</div> */}
             <Signup />
         </div>
     );
