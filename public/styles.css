@@ -97,8 +97,8 @@ body {
     border-radius: 9px;
 }
 
-.input-field input {
-    padding: 1.2rem 2rem;
+.input-area{
+    padding: 1rem 2rem;
     margin: 0.5rem;
     width: 95%;
     border-radius: 5px;
@@ -106,11 +106,22 @@ body {
     color: hsl(249, 10%, 26%);
     font-weight: 700;
     caret-color: hsl(248, 32%, 49%);
+
+
 }
-.input-field input:focus {
+
+.input-area:focus {
     outline: none;
     border: 1.5px solid hsl(248, 32%, 49%);
 }
+
+.input-field input {
+    border: none;
+    outline: none;
+}
+
+
+
 
 .green-btn {
     background-color: hsl(154, 59%, 51%);
@@ -141,6 +152,10 @@ footer {
     .page-content {
         flex-direction: column;
         margin-top: 6rem;
+    }
+
+    .body {
+        background-image: url("./images/bg-intro-mobile.png");
     }
 
     .form-main {
