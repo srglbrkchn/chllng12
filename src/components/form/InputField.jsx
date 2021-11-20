@@ -6,7 +6,12 @@ function InputField() {
     return (
         <div className="input-field">
             {inputInfos.map(inputInfo => {
-                return (<Entery type={inputInfo.type} placeholder={inputInfo.placeholder}/>);
+                return (<Entery
+                    type={inputInfo.type}
+                    placeholder={inputInfo.placeholder}
+                    name={inputInfo.name}
+                    errMsg = {inputInfo.errMsg}
+                    />);
             })}
         </div>
     );
