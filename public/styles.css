@@ -12,6 +12,12 @@ body {
     min-width: 365px;
 }
 
+input {
+    color: hsl(249, 10%, 26%);
+    font-weight: 700;
+    caret-color: hsl(248, 32%, 49%);
+}
+
 ::placeholder {
     font-weight: 700;
 }
@@ -110,6 +116,11 @@ body {
     color: hsl(0, 100%, 74%);
     margin: 0 0 0.8rem;
     font-style: italic;
+    display: none;
+}
+
+.err-sign {
+    visibility: hidden;
 }
 
 .input-area {
@@ -121,13 +132,15 @@ body {
     width: 100%;
     border-radius: 5px;
     border: 1px solid hsl(246, 25%, 77%);
-    color: hsl(249, 10%, 26%);
-    font-weight: 700;
-    caret-color: hsl(248, 32%, 49%);
 }
-.input-area:focus {
+.input-area:focus-within {
     outline: none;
-    border: 1.5px solid hsl(248, 32%, 49%);
+    border: 1px solid hsl(248, 32%, 49%);
+}
+
+.err {
+    border: solid 2px hsl(0, 100%, 74%);
+    color: hsl(0, 100%, 74%);
 }
 
 .input-field input {
