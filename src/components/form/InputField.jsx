@@ -5,8 +5,9 @@ import inputInfos from "../../inputInfo";
 function InputField() {
     return (
         <div className="input-field">
-            {inputInfos.map(inputInfo => {
+            {inputInfos.map((inputInfo, index) => {
                 return (<Entery
+                    key = {index}
                     type={inputInfo.type}
                     placeholder={inputInfo.placeholder}
                     name={inputInfo.name}

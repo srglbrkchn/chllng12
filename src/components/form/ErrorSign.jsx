@@ -1,8 +1,9 @@
 import React from "react";
 
-function ErrorSign() {
+function ErrorSign(props) {
     return (
         <svg
+        style={{visibility: props.visibility }}
         className="err-sign"
         width="24"
         height="24"
