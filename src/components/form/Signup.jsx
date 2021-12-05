@@ -5,10 +5,15 @@ import BlueHeader from "./BlueHeader";
 
 function Signup() {
 
+    function handleSubmit(event) {
+        console.log("submitted");
+        event.preventDefault();
+    }
+
     return (
         <div className="form-main">
             <BlueHeader emphasis="Try it free 7 days " normal=" then $20/mo.thereafter"/>
-            <form className="form-content" noValidate>
+            <form className="form-content" onSubmit={handleSubmit} noValidate>
                 <InputField/>
                 <GreenBtn
                     type="submit"
