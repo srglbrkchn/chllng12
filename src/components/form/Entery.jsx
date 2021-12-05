@@ -2,12 +2,15 @@ import React, {useState} from "react";
 import ErrorSign from "./ErrorSign";
 
 function Entery(props) {
-    const [inputValue, setInputValue] = useState("");
+    const [inputValue,
+        setInputValue] = useState("");
 
     function handleChange(event) {
         const iValue = event.target.value;
         setInputValue(iValue);
+    }
 
+    function handleOnBlur(event) {
         console.log(event.target);
     }
 
@@ -19,9 +22,10 @@ function Entery(props) {
                     placeholder={props.placeholder}
                     name={props.name}
                     onChange={handleChange}
+                    onBlur={handleOnBlur}
                     value={inputValue}
                     required/>
-              <ErrorSign visibility = "" />
+                <ErrorSign visibility=""/>
             </div>
             <p className="error-msg">{props.errMsg}</p>
         </div>

@@ -8,6 +8,7 @@ function InputField() {
             {inputInfos.map((inputInfo, index) => {
                 return (<Entery
                     key = {index}
+                    id = {index}
                     type={inputInfo.type}
                     placeholder={inputInfo.placeholder}
                     name={inputInfo.name}
