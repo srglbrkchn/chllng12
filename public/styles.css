@@ -120,7 +120,7 @@ input {
 }
 
 .err-sign {
-    visibility: hidden;
+    visibility:hidden;
 }
 
 .input-area {
@@ -136,11 +136,6 @@ input {
 .input-area:focus-within {
     outline: none;
     border: 1px solid hsl(248, 32%, 49%);
-}
-
-.err {
-    border: solid 2px hsl(0, 100%, 74%);
-    color: hsl(0, 100%, 74%);
 }
 
 .input-field input {
