@@ -2,11 +2,14 @@ import React, {useState} from "react";
 import ErrorSign from "./ErrorSign";
 
 function Entery(props) {
+
+    const submitted = props.submitted;
+
     const [inputValue,
         setInputValue] = useState("");
 
     const [err,
-        setErr] = useState(false);
+        setErr] = useState(true);
 
     function handleChange(event) {
         const iValue = event.target.value;
@@ -33,7 +36,7 @@ function Entery(props) {
             <div
                 className="input-area"
                 style={{
-                border: err && "solid 2px hsl(0, 100%, 74%)"
+                border: (err && submitted) && "solid 2px hsl(0, 100%, 74%)"
             }}>
                 <input
                     type={props.type}
@@ -44,18 +47,18 @@ function Entery(props) {
                     onFocus={handleFocus}
                     value={inputValue}
                     style={{
-                    color: err && "hsl(0, 100%, 74%)"
+                    color: (err && submitted) && "hsl(0, 100%, 74%)"
                 }}
                     required/>
                 <ErrorSign
-                    visibility={err
+                    visibility={(err && submitted)
                     ? "visible"
                     : "hidden"}/>
             </div>
             <p
                 className="error-msg"
                 style={{
-                display: err
+                display: (err && submitted)
                     ? "block"
                     : "none"
             }}>{props.errMsg}</p>

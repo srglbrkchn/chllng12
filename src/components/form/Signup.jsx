@@ -1,12 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import InputField from "./InputField";
 import GreenBtn from "./GreenBtn";
 import BlueHeader from "./BlueHeader";
 
 function Signup() {
+    const [submitted, setSubmitted] = useState(false);
 
     function handleSubmit(event) {
-        console.log("submitted");
+        setSubmitted(true); 
         event.preventDefault();
     }
 
@@ -14,7 +15,7 @@ function Signup() {
         <div className="form-main">
             <BlueHeader emphasis="Try it free 7 days " normal=" then $20/mo.thereafter"/>
             <form className="form-content" onSubmit={handleSubmit} noValidate>
-                <InputField/>
+                <InputField submitted={submitted}/>
                 <GreenBtn
                     type="submit"
                     className="green-btn"
