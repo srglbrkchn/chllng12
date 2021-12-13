@@ -5,15 +5,21 @@ function Entery(props) {
 
     const submitted = props.submitted;
 
-    const [inputValue,
-        setInputValue] = useState("");
+    const [formInfo,
+        setFormInfo] = useState({fName: "", lName: "", email: "", password: ""});
 
     const [err,
         setErr] = useState(true);
 
     function handleChange(event) {
-        const iValue = event.target.value;
-        setInputValue(iValue);
+        const {name, value} = event.target;
+
+        setFormInfo((preValue) => {
+            return {
+                ...preValue,
+                [name]: value
+            }
+        });
     }
 
     function handleOnBlur(event) {
@@ -25,11 +31,9 @@ function Entery(props) {
         }
     }
 
-    function handleFocus (event) {
+    function handleFocus(event) {
         setErr(false);
     }
-
-
 
     return (
         <div className="input-outer-area">
@@ -45,7 +49,7 @@ function Entery(props) {
                     onChange={handleChange}
                     onBlur={handleOnBlur}
                     onFocus={handleFocus}
-                    value={inputValue}
+                    value={formInfo.name}
                     style={{
                     color: (err && submitted) && "hsl(0, 100%, 74%)"
                 }}
